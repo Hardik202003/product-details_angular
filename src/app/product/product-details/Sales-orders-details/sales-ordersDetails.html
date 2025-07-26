@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Sales Order Details :</h2>
+@if (salesOrder){
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-5">
+          <p><strong>Order ID :</strong> {{ salesOrder.id }}</p>
+          <p><strong>Order Number :</strong> {{ salesOrder.orderNumber }}</p>
+          <p><strong>Delivery Date :</strong> {{ salesOrder.deliveryDate }}</p>
+          <p><strong>Total Amount :</strong> ₹{{ salesOrder.totalAmount }}</p>
+          <p><strong>Payment Status :</strong> {{ salesOrder.paymentStatus }}</p>
+          <p><strong>Location :</strong> {{ salesOrder.location }}</p>
+            <p><strong>Created Date :</strong> {{ salesOrder.CreatedDate }}</p>
+          <p><strong>Customer Name :</strong> {{ salesOrder.customerName }}</p>
+           <p><strong>SalesOrderItems :</strong> {{ salesOrder.salesOrderItems }}</p>
+           <p><strong>salesOrderPayments :</strong> {{ salesOrder.salesOrderPayments }}</p>
+        </div>
+
+      </div>
+     </div>
+      </div>
+    }
+     </div>
+
+

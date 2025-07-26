@@ -1,59 +1,119 @@
-# Demo
+# Product Details Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+This is an Angular application for managing product details, including product listings, product details, sales orders, and purchase orders.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Product listing with search and filtering
+- Detailed product information
+- Sales orders management
+- Purchase orders management
+- Responsive design with Bootstrap
 
+## Prerequisites
+
+- Node.js (version 18 or higher)
+- npm or yarn
+- Angular CLI
+
+## Installation
+
+1. Clone the repository:
 ```bash
-ng serve
+git clone https://github.com/Hardik202003/product-details_angular.git
+cd product-details_angular
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Install dependencies:
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Development
 
+Run the development server:
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-To build the project run:
+## Build
 
+Build the project for production:
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Testing
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+Run unit tests:
 ```bash
-ng test
+npm test
 ```
 
-## Running end-to-end tests
+## Deployment
 
-For end-to-end (e2e) testing, run:
+This application is configured for deployment to GitHub Pages.
 
+### Deploy to GitHub Pages
+
+1. Make sure you have the latest changes committed to your repository
+2. Run the deployment command:
 ```bash
-ng e2e
+npm run deploy
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The application will be deployed to: https://hardik202003.github.io/product-details_angular/
 
-## Additional Resources
+### Manual Deployment Steps
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+If you prefer to deploy manually:
+
+1. Build the application for production:
+```bash
+npm run build
+```
+
+2. Push the `dist/` folder to the `gh-pages` branch of your repository
+3. Enable GitHub Pages in your repository settings and set the source to the `gh-pages` branch
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── product/
+│   │   ├── product-details/
+│   │   ├── product-list/
+│   │   ├── product-module.ts
+│   │   ├── product-service.ts
+│   │   └── product.interface.ts
+│   ├── app-routing-module.ts
+│   ├── app.component.ts
+│   └── app.module.ts
+├── assets/
+└── styles.css
+```
+
+## Technologies Used
+
+- Angular 20
+- TypeScript
+- Bootstrap 5
+- RxJS
+- Angular Router
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Commit and push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

@@ -1,0 +1,114 @@
+<div class="container mt-4">
+  <h2 class="mb-3 text-center">Product Details</h2>
+  <div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-body">
+      <div class="text-center mb-3">
+        <img src="" alt="logo" class="img-fluid" style="max-height: 250px;">
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Brand :</strong> {{ product.brand }}</li>
+        <li class="list-group-item"><strong>Name :</strong> {{ product.name }}</li>
+        <li class="list-group-item"><strong>Category :</strong> {{ product.category }}</li>
+        <li class="list-group-item"><strong>Purchase Price :</strong> {{ product.purchasePrice }}</li>
+        <li class="list-group-item"><strong>Sales Price :</strong> {{ product.salesPrice }}</li>
+        <li class="list-group-item"><strong>MRP :</strong> {{ product.mrp }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--SalesOrders-->
+<div class="container mt-4">
+  <h2 class="mb-3">SalesOrders:</h2>
+
+  <div class="table-responsive">
+    <table class="table align-middle shadow-sm">
+      <thead class="table-light">
+        <tr>
+          <th></th>
+          <th>ID</th>
+          <th>orderNumber</th>
+          <th>delaveryDate</th>
+          <th>totalAmount</th>
+          <th>paymentStatus</th>
+          <th>location</th>
+          <th>CreatedDate</th>
+          <th>customerName</th>
+          <th>salesOrderItems</th>
+          <th>salesOrderPayments</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (order of product.SalesOrder; track order) {
+        <tr>
+          <td>
+            <button class="btn btn-primary btn-sm"
+              [routerLink]="['/products', product.id, 'salesOrderItems', order.id]">Details</button>
+          </td>
+          <td>{{ order.id }}</td>
+          <td>{{ order.orderNumber }}</td>
+          <td>{{ order.deliveryDate }}</td>
+          <td>{{ order.totalAmount }}</td>
+          <td>{{ order.paymentStatus }}</td>
+          <td>{{ order.location }}</td>
+          <td>{{ order.CreatedDate }}</td>
+          <td>{{ order.customerName }}</td>
+          <td>{{ order.salesOrderItems }}</td>
+          <td>{{ order.salesOrderPayments }}</td>
+        </tr>
+        }
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+
+
+
+<!--PurchaseOrders-->
+
+<div class="container mt-4">
+  <h2 class="mb-3">PurchaseOrders:</h2>
+
+  <div class="table-responsive">
+    <table class="table align-middle shadow-sm">
+      <thead class="table-light">
+        <tr>
+          <th></th>
+          <th>id</th>
+          <th>orderNumber</th>
+          <th>deliveryDate</th>
+          <th>totalAmount</th>
+          <th>paymentStatus</th>
+          <th>location</th>
+          <th>CreatedDate</th>
+          <th>supplierName</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        @for(order2 of product.PurchaseOrder ; track order2){
+        <tr>
+          <td>
+            <button class="btn btn-primary btn-sm"
+              [routerLink]="['/products', product.id, 'purchaseOrderItems', order2.id]">Details</button>
+          </td>
+          <td>{{ order2.id }}</td>
+          <td>{{ order2.orderNumber }}</td>
+          <td>{{ order2.deliveryDate }}</td>
+          <td>{{ order2.totalAmount }}</td>
+          <td>{{ order2.paymentStatus }}</td>
+          <td>{{ order2.location }}</td>
+          <td>{{ order2.CreatedDate }}</td>
+          <td>{{ order2.supplierName }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

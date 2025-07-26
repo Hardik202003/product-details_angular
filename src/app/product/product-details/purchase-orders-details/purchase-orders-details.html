@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <h2 class="mb-3">Purchase Order Details :</h2>
+@if (purchaseOrder) {
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>Order ID :</strong> {{ purchaseOrder.id }}</p>
+          <p><strong>Order Number :</strong> {{ purchaseOrder.orderNumber }}</p>
+          <p><strong>Delivery Date :</strong> {{ purchaseOrder.deliveryDate }}</p>
+          <p><strong>Total Amount :</strong> ₹{{ purchaseOrder.totalAmount }}</p>
+          <p><strong>Payment Status :</strong> {{ purchaseOrder.paymentStatus }}</p>
+          <p><strong>Location :</strong> {{ purchaseOrder.location }}</p>
+          <p><strong>Created Date :</strong> {{ purchaseOrder.CreatedDate }}</p>
+          <p><strong>Supplier Name :</strong> {{ purchaseOrder.supplierName }}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    }
+  </div>
+<div>
+
+
+
+
+
+
+
