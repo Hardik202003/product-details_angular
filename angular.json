@@ -100,7 +100,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/product-details_angular/"
+            "baseHref": "/product-details_angular/",
+            "outputPath": "dist/demo"
           }
         }
       }
